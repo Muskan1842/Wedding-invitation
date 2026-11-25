@@ -566,8 +566,6 @@
       }
 
       @media (min-width: 641px) {
-        .hero-wrap { padding: clamp(1rem, 3vw, 2.6rem); }
-        .hero-card { padding: 3.3rem 2.5rem; }
         .hero-intro { font-size: 1.12rem; }
         .text-link { width: auto; padding-inline: 1.1rem; }
         .day-heading { gap: .4rem 1rem; }
@@ -579,7 +577,6 @@
       }
 
       @media (min-width: 901px) {
-        .hero-wrap { padding: 0; }
         .hero {
           width: 100%;
           min-height: 100vh;
@@ -618,6 +615,80 @@
           padding: clamp(1.35rem, 2.4vw, 2.25rem);
         }
         .event-copy h4 { font-size: clamp(1.65rem, 2.4vw, 2.25rem); }
+      }
+
+      @media (max-width: 900px), (max-width: 1366px) and (pointer: coarse) {
+        .hero-wrap {
+          --hero-gold: #f6d89d;
+          background: var(--ink);
+          color: var(--paper-light);
+        }
+
+        .hero {
+          min-height: 100vh;
+          min-height: 100svh;
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero-card,
+        .hero-art { grid-area: 1 / 1; }
+
+        .hero-card {
+          display: grid;
+          align-self: stretch;
+          align-items: stretch;
+          justify-self: center;
+          width: min(100%, 38rem);
+          padding: clamp(2rem, 5svh, 3.5rem) 1.25rem 1.5rem;
+          background: transparent;
+          box-shadow: none;
+          pointer-events: none;
+        }
+
+        .hero-copy {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .hero-card :is(.ganesha, .eyebrow, .hero-intro, .hero-date, .hero-place) { color: inherit; }
+
+        .hero-card .text-link {
+          align-self: center;
+          margin-top: auto;
+          background-color: rgba(20, 28, 23, .36);
+          border-color: currentColor;
+          color: inherit;
+          pointer-events: auto;
+        }
+
+        .hero-card .text-link:active { background-color: var(--ink); }
+        .hero-card .text-link:focus-visible { outline-color: currentColor; }
+
+        .hero-art {
+          aspect-ratio: auto;
+          border: 0;
+          background: transparent;
+        }
+
+        .hero-art::after {
+          position: absolute;
+          inset: 0;
+          content: "";
+          background: linear-gradient(180deg, rgba(20, 28, 23, .63), rgba(20, 28, 23, .67) 65%, rgba(20, 28, 23, .52));
+          pointer-events: none;
+        }
+
+        .hero-controls { display: none; }
+
+        .hero-rule { background: var(--hero-gold); }
+        h1 .ampersand { color: var(--hero-gold); }
+      }
+
+      @media (max-width: 640px) {
+        .hero-card { padding-top: 25px; }
+        .hero-rule { margin-top: 5px; }
+        .hero-copy > .eyebrow,
+        .hero-copy > .hero-intro { display: none; }
       }
 
       @media (hover: hover) and (pointer: fine) {
