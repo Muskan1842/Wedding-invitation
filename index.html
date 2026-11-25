@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=DM+Sans:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&amp;display=swap" rel="stylesheet" media="(max-width: 640px)">
     <style>
       :root {
         color-scheme: light;
@@ -485,6 +486,88 @@
         font-size: .62rem;
         letter-spacing: .18em;
         text-transform: uppercase;
+      }
+
+      @media (max-width: 640px) {
+        :root { --mobile-display: "Libre Baskerville", Georgia, serif; }
+
+        .eyebrow {
+          font-size: .75rem;
+          letter-spacing: .16em;
+          line-height: 1.4;
+          text-wrap: balance;
+        }
+
+        h1,
+        .welcome h2,
+        .section-heading h2,
+        .event-copy h4,
+        footer .footer-names {
+          font-family: var(--mobile-display);
+          letter-spacing: -.025em;
+        }
+
+        h1 {
+          font-size: clamp(2.5rem, 1.25rem + 6vw, 3.75rem);
+          line-height: 1.06;
+        }
+
+        h1 .ampersand {
+          margin: .06em 0;
+          font-size: .62em;
+          line-height: 1;
+        }
+
+        .hero-intro {
+          max-width: 33ch;
+          line-height: 1.55;
+          text-wrap: balance;
+        }
+
+        .hero-date {
+          font-family: var(--mobile-display);
+          font-size: clamp(1.05rem, .75rem + 1.6vw, 1.35rem);
+          letter-spacing: 0;
+          line-height: 1.35;
+        }
+
+        .hero-place { font-size: .75rem; letter-spacing: .12em; }
+        .text-link { font-size: .8125rem; letter-spacing: .065em; }
+
+        .welcome h2,
+        .section-heading h2 {
+          font-size: clamp(1.75rem, 1.1rem + 3.2vw, 2.4rem);
+          line-height: 1.16;
+          text-wrap: balance;
+        }
+
+        .section-heading .eyebrow { font-size: 1rem; letter-spacing: .14em; }
+        .section-heading > p:last-child { font-size: 1rem; line-height: 1.55; text-wrap: balance; }
+
+        .day-heading { column-gap: .7rem; }
+        .day-date-row {
+          flex-basis: 0;
+          column-gap: .55rem;
+          font-size: clamp(.8125rem, .5rem + 1.5vw, .875rem);
+        }
+        .day-date-row::after { min-width: .5rem; }
+        .day-date { letter-spacing: .045em; }
+
+        .event-time { font-variant-numeric: lining-nums tabular-nums; letter-spacing: .055em; }
+        .event-copy h4 {
+          font-size: clamp(1.375rem, 1rem + 1.8vw, 1.8rem);
+          line-height: 1.22;
+        }
+        .dress-code strong { font-size: .75rem; letter-spacing: .08em; }
+
+        .venue-copy h2 {
+          font-size: clamp(1.875rem, .875rem + 4.5vw, 2.375rem);
+          line-height: 1.15;
+          text-wrap: balance;
+        }
+
+        footer .footer-names { font-size: clamp(1.35rem, 1rem + 1.7vw, 1.75rem); }
+        footer .footer-date { font-size: .75rem; letter-spacing: .1em; line-height: 1.4; }
       }
 
       @media (min-width: 641px) {
