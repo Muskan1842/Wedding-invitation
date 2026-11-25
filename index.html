@@ -201,7 +201,6 @@
       .hero-controls {
         display: flex;
         align-items: center;
-        gap: .25rem;
         position: absolute;
         right: .75rem;
         bottom: .75rem;
@@ -236,6 +235,7 @@
 
       .hero-photo-count {
         min-width: 3.3em;
+        margin-inline: .25rem;
         text-align: center;
         font-variant-numeric: tabular-nums;
       }
@@ -582,7 +582,6 @@
               <button type="button" data-photo-step="-1" aria-label="Previous photo" aria-controls="hero-photos">←</button>
               <span class="hero-photo-count" aria-hidden="true"></span>
               <button type="button" data-photo-step="1" aria-label="Next photo" aria-controls="hero-photos">→</button>
-              <button type="button" class="hero-photo-play" aria-controls="hero-photos">Pause</button>
             </div>
           </div>
         </div>
