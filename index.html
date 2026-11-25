@@ -68,21 +68,9 @@
         align-self: center;
         padding: 1.8rem 1.25rem 1.6rem;
         background: var(--paper-light);
-        border: 1px solid rgba(174, 137, 80, .38);
         box-shadow: 0 24px 70px rgba(50, 57, 44, .09);
         text-align: center;
       }
-
-      .hero-card::before,
-      .hero-card::after {
-        position: absolute;
-        content: "";
-        pointer-events: none;
-        border: 1px solid rgba(174, 137, 80, .34);
-      }
-
-      .hero-card::before { inset: .6rem; }
-      .hero-card::after { inset: .85rem; border-color: rgba(117, 132, 107, .2); }
 
       .hero-copy { position: relative; z-index: 1; }
 
@@ -591,14 +579,18 @@
       }
 
       @media (min-width: 901px) {
-        .hero-wrap { min-height: 100vh; display: grid; align-items: center; }
+        .hero-wrap { padding: 0; }
         .hero {
-          min-height: min(820px, calc(100vh - 5rem));
-          grid-template-columns: minmax(0, 1fr) minmax(0, .92fr);
+          width: 100%;
+          min-height: 100vh;
+          min-height: 100svh;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
         .hero-card {
-          margin-right: -5.5rem;
-          padding: clamp(2.4rem, 6vw, 5.8rem) clamp(2rem, 7vw, 7rem);
+          align-self: stretch;
+          display: grid;
+          align-items: center;
+          padding: clamp(2rem, 5vh, 4.5rem) clamp(2rem, 6vw, 6rem);
         }
         .ganesha { margin-bottom: 1.6rem; font-size: 1.22rem; }
         h1 { margin: 1.15rem 0 1.1rem; font-size: clamp(3.1rem, 6.5vw, 6rem); }
@@ -606,7 +598,7 @@
         .hero-rule { margin: 1.8rem auto; }
         .hero-date { font-size: clamp(1.25rem, 2vw, 1.75rem); letter-spacing: .09em; }
         .hero-place { margin: .6rem 0 1.8rem; }
-        .hero-art { min-height: 600px; aspect-ratio: auto; }
+        .hero-art { aspect-ratio: auto; }
         .event-card {
           display: grid;
           grid-template-columns: minmax(160px, .78fr) minmax(0, 1fr);
