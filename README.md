@@ -1,4 +1,4 @@
-# Siddharth & Muskan Wedding Invitation
+# Muskan & Siddharth Wedding Invitation
 
 A responsive, standalone wedding invitation website. Open `index.html` in a browser to view it. The artwork is stored locally in `assets/`; the map button opens Google Maps.
 
