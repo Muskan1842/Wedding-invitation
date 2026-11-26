@@ -226,6 +226,28 @@
 
       .hero-controls button:active { background: rgba(255, 255, 255, .2); }
 
+      .music-toggle {
+        position: fixed;
+        left: max(1rem, env(safe-area-inset-left));
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        z-index: 20;
+        display: grid;
+        place-items: center;
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid rgba(174, 137, 80, .65);
+        border-radius: 50%;
+        background: rgba(39, 54, 45, .94);
+        box-shadow: 0 4px 14px rgba(39, 54, 45, .2);
+        color: white;
+        font: 600 1rem var(--sans);
+        cursor: pointer;
+      }
+
+      .music-toggle:hover { background: var(--ink); }
+      .music-toggle:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+      .music-toggle:active { transform: scale(.96); }
+
       .hero-photo-count {
         min-width: 3.3em;
         margin-inline: .25rem;
@@ -406,7 +428,13 @@
         margin: .5rem 0 0;
         color: var(--sage-dark);
         font-size: .875rem;
+        font-weight: 600;
         line-height: 1.4;
+      }
+
+      .event-location a {
+        color: inherit;
+        text-decoration: none;
       }
 
       .event-location-icon {
@@ -427,6 +455,7 @@
         border-top: 1px solid var(--line);
         color: var(--sage-dark);
         font-size: 1rem;
+        font-weight: 600;
         line-height: 1.55;
       }
 
@@ -727,7 +756,7 @@
                 <time class="event-time" datetime="2026-12-27T11:00">11:00 AM</time>
                 <h4>Phoolon Ki Haldi</h4>
                 <p class="event-kind">A morning of flowers <span class="ampersand">&amp;</span> blessings</p>
-                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> Party Lawn 2</p>
+                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 2</a></p>
                 <p class="dress-code"><strong>Dress code</strong>Blue <span class="ampersand">&amp;</span> White or Yellow <span class="ampersand">&amp;</span> White + Sunglasses</p>
               </div>
               <div class="event-image">
@@ -740,12 +769,12 @@
                 <time class="event-time" datetime="2026-12-27T17:00">5:00 PM</time>
                 <h4>Sagai <span class="ampersand">&amp;</span> Tilak</h4>
                 <p class="event-kind">An evening of family traditions <span class="ampersand">&amp;</span> blessings</p>
-                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> Party Lawn 2</p>
+                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 2</a></p>
                 <hr class="event-divider">
                 <time class="event-time" datetime="2026-12-27T18:00">6:00 PM</time>
                 <h4>Glitz <span class="ampersand">&amp;</span> Glamz</h4>
                 <p class="event-kind">Sangeet <span class="ampersand">&amp;</span> Ring Ceremony</p>
-                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> Party Lawn 2</p>
+                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 2</a></p>
               </div>
               <div class="event-image">
                 <img src="assets/glitz-and-glamz.jpg" width="1000" height="1400" loading="lazy" decoding="async" alt="Illustrated couple dancing beneath string lights in navy blue and gold outfits">
@@ -765,7 +794,7 @@
                 <time class="event-time" datetime="2026-12-28T08:00">8:00 AM</time>
                 <h4>Muhurtam</h4>
                 <p class="event-kind">The phere · an auspicious morning of tradition</p>
-                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> Party Lawn 1</p>
+                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 1</a></p>
                 <p class="dress-code"><strong>Dress code</strong>Dhoti Kurta <span class="ampersand">&amp;</span> South Indian Saree look</p>
               </div>
               <div class="event-image">
@@ -778,7 +807,7 @@
                 <time class="event-time" datetime="2026-12-28T13:00">1:00 PM</time>
                 <h4>Wedding Reception</h4>
                 <p class="event-kind">An afternoon of celebration <span class="ampersand">&amp;</span> good company</p>
-                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> Party Lawn 1</p>
+                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 1</a></p>
               </div>
               <div class="event-image">
                 <img src="assets/reception.jpg" width="1000" height="1400" loading="lazy" decoding="async" alt="An illustrated couple in burgundy wedding attire beneath floral garlands and lanterns">
@@ -803,9 +832,14 @@
 
     <footer>
       <p class="eyebrow">With love</p>
-      <p class="footer-names">Radha Dinesh Gupta<br>Arpit Gupta<br>Shilpi Gupta<br>Pratham</p>
+      <p class="footer-names">Radha Dinesh Gupta<br>Arpit Gupta<br>Shilpi Gupta<br>Pratham Gupta</p>
       <p class="footer-date">27 <span class="ampersand">&amp;</span> 28 December 2026 · Pench</p>
     </footer>
+    <audio id="background-music" src="assets/kumkumala.mp3" autoplay loop preload="auto"></audio>
+    <button class="music-toggle" id="music-toggle" type="button" aria-label="Play background music" aria-pressed="false" title="Play background music">
+      <span aria-hidden="true">▶</span>
+    </button>
     <script src="hero-gallery.js"></script>
+    <script src="music-player.js"></script>
   </body>
 </html>
