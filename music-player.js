@@ -1,6 +1,8 @@
 const audio = document.getElementById("background-music");
 const button = document.getElementById("music-toggle");
-const icon = button.querySelector("span");
+const icon = button.querySelector("img");
+const playIcon = "assets/play-solid-full.svg";
+const pauseIcon = "assets/pause-solid-full.svg";
 let hasStarted = !audio.paused;
 
 function updateButton() {
@@ -9,7 +11,7 @@ function updateButton() {
   button.setAttribute("aria-label", label);
   button.setAttribute("aria-pressed", String(playing));
   button.title = label;
-  icon.textContent = playing ? "⏸" : "▶";
+  icon.src = playing ? pauseIcon : playIcon;
 }
 
 button.addEventListener("click", async () => {

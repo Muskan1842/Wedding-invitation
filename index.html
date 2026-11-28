@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2f0e7">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Celebrate Muskan and Siddharth's wedding in Pench on 27 and 28 December 2026.">
     <title>Muskan and Siddharth — Wedding Celebration</title>
     <meta property="og:type" content="website">
@@ -247,6 +248,11 @@
       .music-toggle:hover { background: var(--ink); }
       .music-toggle:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
       .music-toggle:active { transform: scale(.96); }
+      .music-toggle img {
+        width: 1.25rem;
+        height: 1.25rem;
+        filter: brightness(0) invert(1);
+      }
 
       .hero-photo-count {
         min-width: 3.3em;
@@ -756,7 +762,7 @@
                 <time class="event-time" datetime="2026-12-27T11:00">11:00 AM</time>
                 <h4>Phoolon Ki Haldi</h4>
                 <p class="event-kind">A morning of flowers <span class="ampersand">&amp;</span> blessings</p>
-                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 2</a></p>
+                <p class="event-location"><img class="event-location-icon" src="assets/location-dot-solid-full.svg" width="16" height="16" alt=""> <a href="https://maps.app.goo.gl/bSrEtt69UkpgKm2t7" target="_blank" rel="noopener noreferrer">Party Lawn 1</a></p>
                 <p class="dress-code"><strong>Dress code</strong>Blue <span class="ampersand">&amp;</span> White or Yellow <span class="ampersand">&amp;</span> White + Sunglasses</p>
               </div>
               <div class="event-image">
@@ -837,7 +843,7 @@
     </footer>
     <audio id="background-music" src="assets/kumkumala.mp3" autoplay loop preload="auto"></audio>
     <button class="music-toggle" id="music-toggle" type="button" aria-label="Play background music" aria-pressed="false" title="Play background music">
-      <span aria-hidden="true">▶</span>
+      <img id="music-icon" src="assets/play-solid-full.svg" alt="" aria-hidden="true">
     </button>
     <script src="hero-gallery.js"></script>
     <script src="music-player.js"></script>
